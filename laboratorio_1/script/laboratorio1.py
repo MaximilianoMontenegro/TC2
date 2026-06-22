@@ -59,17 +59,6 @@ def sim_aprox(aproxs, orders2analyze, ripple, attenuation):
 
             z, p, k = sig.besselap(this_order, norm='delay')
 
-            num, den = sig.zpk2tf(z, p, k)
-
-            tau = 100e-6
-            fw = 5000
-
-            Omega_w = 2*np.pi*fw
-            Omega_s = (1/tau) / Omega_w
-
-            num, den = sig.lp2lp(num, den, Omega_s)
-
-            z, p, k = sig.tf2zpk(num, den)
         elif this_aprox == 'Cauer':
 
             z,p,k = sig.ellipap(this_order, this_ripple, this_att)
