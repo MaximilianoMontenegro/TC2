@@ -97,7 +97,7 @@ aprox_name = 'Bessel'
 
 # parametrizamos el orden para cada aproximación
 #orders2analyze = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
-orders2analyze = [2,3,4,5]
+orders2analyze = [2,3,4]
 alpha_max = [1]
 
 # Mismo requerimiento de ripple y atenuación
@@ -119,32 +119,29 @@ for H, nombre in zip(all_sys, filter_names):
     fase = np.unwrap(np.angle(h))
     tau_g = -np.gradient(fase, w)
 
-    # Frecuencias normalizadas
-    Omega_3k = 3000/5000
-    Omega_5k = 1
+    # Frecuencia normalizada correspondiente a 3 kHz
+    Omega_3k = 0.6 * np.pi
 
     idx = np.argmin(np.abs(w - Omega_3k))
 
     tau_3k = tau_g[idx]
 
-    tau = 100e-6
-    fw = 5000
-    Omega_w = 2*np.pi*fw
-    Omega_s = (1/tau) / Omega_w
+    # Como se usó norm='delay'
+    tau_0 = 1.0
 
-    tau_0 = 1/Omega_s
+    desvio = abs(tau_3k - tau_0) / tau_0 * 100
 
-    desvio = abs(tau_3k - tau_0)/tau_0 * 100
-
-    _, h5 = sig.freqs(H.num, H.den, [Omega_5k])
-
-    att_5k = -20*np.log10(abs(h5[0]))
+    # Retardo real en microsegundos
+    tau_real_us = tau_3k * 100
 
     print("\n" + "="*50)
     print(nombre)
-    print(f"τg_norm(3 kHz) = {tau_3k:.4f}")
+    print(f"Ω(3 kHz)       = {Omega_3k:.4f}")
+    print(f"τg_norm(0.6π)  = {tau_3k:.4f}")
+    print(f"τg(3 kHz)      = {tau_real_us:.2f} μs")
     print(f"Desvío         = {desvio:.2f} %")
-    print(f"Att(5 kHz)     = {att_5k:.2f} dB")
 
-    if desvio <= 2 and att_5k <= 1:
-        print(">>> CUMPLE <<<")
+    if desvio <= 2:
+        print(">>> CUMPLE RETARDO <<<")
+    else:
+        print(">>> NO CUMPLE <<<")

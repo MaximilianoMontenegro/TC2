@@ -1,3 +1,9 @@
+Questionable use of curly braces in ".meas ac r1_val param {r1}"
+    Error: undefined symbol in: "[r1]"
+Questionable use of curly braces in ".meas ac r2_val param {r2}"
+    Error: undefined symbol in: "[r2]"
+Questionable use of curly braces in ".meas ac r3_val param {r3}"
+    Error: undefined symbol in: "[r3]"
 Circuit: * Z:\home\monezemax\UTN\CuartoAnio\Teoria de los circuitos 2\TC2\laboratorio_1\Spice\laboratorio1.asc
 
 Early termination of direct N-R iteration.
@@ -29,27 +35,30 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-r1_val: 1252.20254202907=(61.9535dB,0°)
-r2_val: 865.27195654209=(58.7431dB,0°)
-r3_val: 1252.20254202907=(61.9535dB,0°)
+
+Measurement "r1_val" FAIL'ed
+
+Measurement "r2_val" FAIL'ed
+
+Measurement "r3_val" FAIL'ed
 r4_val: 1000=(60dB,0°)
-c_val: 1e-008=(-160dB,0°)
+c_val: 1e-006=(-120dB,0°)
 
 
-Date: Sun Jun 21 21:51:40 2026
-Total elapsed time: 0.120 seconds.
+Date: Mon Jun 22 17:49:11 2026
+Total elapsed time: 0.715 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 1655
+totiter = 1816
 traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 76
-fillins = 564
+matrix size = 144
+fillins = 2243
 solver = Normal
-Matrix Compiler1:    3170 opcodes
-Matrix Compiler2: 16.45 KB object code size  1.5/1.4/[0.5]
+Matrix Compiler1:   23407 opcodes
+Matrix Compiler2: 51.82 KB object code size  6.4/4.0/[1.4]
 
