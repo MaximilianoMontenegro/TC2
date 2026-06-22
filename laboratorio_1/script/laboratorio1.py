@@ -57,19 +57,19 @@ def sim_aprox(aproxs, orders2analyze, ripple, attenuation):
 
         elif this_aprox == 'Bessel':
 
-            z,p,k = sig.besselap(this_order, norm='delay')
-            # Paso a transferencia
+            z, p, k = sig.besselap(this_order, norm='delay')
+
             num, den = sig.zpk2tf(z, p, k)
 
-            # Desnormalización para τg(0)=100  us
             tau = 100e-6
-            wo = 1/tau
+            fw = 5000
 
-            num, den = sig.lp2lp(num, den, wo)
+            Omega_w = 2*np.pi*fw
+            Omega_s = (1/tau) / Omega_w
 
-            # Vuelvo a ZPK para seguir con el código existente
+            num, den = sig.lp2lp(num, den, Omega_s)
+
             z, p, k = sig.tf2zpk(num, den)
-
         elif this_aprox == 'Cauer':
 
             z,p,k = sig.ellipap(this_order, this_ripple, this_att)
@@ -107,8 +107,8 @@ aprox_name = 'Bessel'
 #aprox_name = 'Cauer'
 
 # parametrizamos el orden para cada aproximación
-orders2analyze = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
-
+#orders2analyze = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+orders2analyze = [2,3,4,5]
 alpha_max = [1]
 
 # Mismo requerimiento de ripple y atenuación
@@ -123,40 +123,39 @@ print_subtitle('Aproximaciones de Bessel')
 
 for H, nombre in zip(all_sys, filter_names):
 
-    # Barrido de frecuencias
-    w = np.logspace(3, 6, 2000)
+    w = np.logspace(-2, 2, 2000)
 
-    # Respuesta en frecuencia
     w, h = sig.freqs(H.num, H.den, w)
 
-    # Retardo de grupo
     fase = np.unwrap(np.angle(h))
     tau_g = -np.gradient(fase, w)
 
-    # τg a 3 kHz
-    f_test = 3000
-    w_test = 2*np.pi*f_test
+    # Frecuencias normalizadas
+    Omega_3k = 3000/5000
+    Omega_5k = 1
 
-    idx = np.argmin(np.abs(w - w_test))
+    idx = np.argmin(np.abs(w - Omega_3k))
 
     tau_3k = tau_g[idx]
-    tau_0 = 100e-6
+
+    tau = 100e-6
+    fw = 5000
+    Omega_w = 2*np.pi*fw
+    Omega_s = (1/tau) / Omega_w
+
+    tau_0 = 1/Omega_s
 
     desvio = abs(tau_3k - tau_0)/tau_0 * 100
 
-    # Atenuación a 5 kHz
-    f_test = 5000
-    w_test = 2*np.pi*f_test
-
-    _, h5 = sig.freqs(H.num, H.den, [w_test])
+    _, h5 = sig.freqs(H.num, H.den, [Omega_5k])
 
     att_5k = -20*np.log10(abs(h5[0]))
 
     print("\n" + "="*50)
     print(nombre)
-    print(f"τg(3 kHz) = {tau_3k*1e6:.2f} us")
-    print(f"Desvío     = {desvio:.2f} %")
-    print(f"Att(5 kHz) = {att_5k:.2f} dB")
+    print(f"τg_norm(3 kHz) = {tau_3k:.4f}")
+    print(f"Desvío         = {desvio:.2f} %")
+    print(f"Att(5 kHz)     = {att_5k:.2f} dB")
 
     if desvio <= 2 and att_5k <= 1:
         print(">>> CUMPLE <<<")
