@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 5.0,
-          "height": 10.16,
-          "width": 10.16
+          "drill": 2.01,
+          "height": 7.0,
+          "width": 3.5
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -179,9 +179,9 @@
       ],
       "track_widths": [
         0.0,
-        1.0,
-        1.5,
-        2.0
+        0.5,
+        0.8,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -613,7 +613,7 @@
   "sheets": [
     [
       "3f402097-3bb7-4217-9445-dd556a169bcf",
-      "Root"
+      "Raíz"
     ]
   ],
   "text_variables": {}

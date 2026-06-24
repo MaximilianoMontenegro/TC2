@@ -1488,12 +1488,6 @@
 		(uuid "03f8b836-052a-4277-a91d-738a5bedd884")
 	)
 	(junction
-		(at 234.95 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0c08bb49-652c-44ea-85cd-b0ee9b7e0e93")
-	)
-	(junction
 		(at 137.16 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1612,12 +1606,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "97f6f1c5-e14f-4686-97a5-7e87afaba43e")
-	)
-	(junction
-		(at 60.96 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a2d9577c-fa87-4aa0-baee-8ed46d9f1eff")
 	)
 	(junction
 		(at 71.12 92.71)
@@ -1919,16 +1907,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 85.09) (xy 60.96 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "238b6911-5aca-4d18-91b0-02ce9f38b4c0")
-	)
-	(wire
-		(pts
 			(xy 49.53 176.53) (xy 49.53 181.61)
 		)
 		(stroke
@@ -2029,23 +2007,13 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 71.12) (xy 234.95 92.71)
+			(xy 234.95 71.12) (xy 234.95 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "32c903d2-0fe7-49b5-be70-6a2f09732fe7")
-	)
-	(wire
-		(pts
-			(xy 234.95 92.71) (xy 234.95 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3732a9ae-4a64-489d-af24-537378eb7178")
 	)
 	(wire
 		(pts
@@ -2389,16 +2357,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 92.71) (xy 236.22 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f982683-3c80-438b-a8b4-d39b2c6e02ec")
-	)
-	(wire
-		(pts
 			(xy 156.21 88.9) (xy 156.21 97.79)
 		)
 		(stroke
@@ -2419,7 +2377,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 92.71) (xy 60.96 92.71)
+			(xy 59.69 92.71) (xy 62.23 92.71)
 		)
 		(stroke
 			(width 0)
@@ -2476,16 +2434,6 @@
 			(type default)
 		)
 		(uuid "8d4d0211-4562-48c3-ab10-ffbc1ba5adfd")
-	)
-	(wire
-		(pts
-			(xy 137.16 97.79) (xy 137.16 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d85fec1-08a5-4bfb-bcac-648911f4b23a")
 	)
 	(wire
 		(pts
@@ -2856,16 +2804,6 @@
 			(type default)
 		)
 		(uuid "d0f5756e-81f5-43ca-9eed-8314e57021f7")
-	)
-	(wire
-		(pts
-			(xy 60.96 92.71) (xy 62.23 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2a7a73c-1572-495c-a5ee-57d644a7546f")
 	)
 	(wire
 		(pts
@@ -3414,7 +3352,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Coaxial:BNC_TEConnectivity_1478035_Horizontal"
+		(property "Footprint" "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal"
 			(at 241.3 102.87 0)
 			(effects
 				(font
@@ -5706,72 +5644,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 137.16 111.76 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b54d90fa-bf6c-4f2b-bf7e-efffec35820a")
-		(property "Reference" "J6"
-			(at 139.7 110.4899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "VA1"
-			(at 135.382 116.332 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical"
-			(at 137.16 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 137.16 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 137.16 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a8311ceb-dbef-4f60-83d5-d2a01ca829d4")
-		)
-		(instances
-			(project "laboratorio1"
-				(path "/3f402097-3bb7-4217-9445-dd556a169bcf"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 184.15 54.61 90)
 		(unit 1)
@@ -5867,7 +5739,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Coaxial:BNC_TEConnectivity_1478035_Horizontal"
+		(property "Footprint" "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal"
 			(at 54.61 92.71 0)
 			(effects
 				(font
@@ -6626,72 +6498,6 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 241.3 92.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eba5d276-ad54-4897-9d0a-7860183f34da")
-		(property "Reference" "J8"
-			(at 240.0299 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Vout"
-			(at 244.348 93.218 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical"
-			(at 241.3 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 241.3 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 241.3 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c5424c83-5071-42c0-b2d4-9aa2f4d5e5f7")
-		)
-		(instances
-			(project "laboratorio1"
-				(path "/3f402097-3bb7-4217-9445-dd556a169bcf"
-					(reference "J8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x01")
 		(at 33.02 138.43 0)
 		(mirror y)
 		(unit 1)
@@ -7022,72 +6828,6 @@
 			(project "laboratorio1"
 				(path "/3f402097-3bb7-4217-9445-dd556a169bcf"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 60.96 80.01 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f2ba6a45-3925-4e93-9173-dd9ae95b9615")
-		(property "Reference" "J7"
-			(at 58.42 81.2801 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Vin"
-			(at 62.738 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical"
-			(at 60.96 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 60.96 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "228706cd-04d1-46e7-b598-6dc4d68c607e")
-		)
-		(instances
-			(project "laboratorio1"
-				(path "/3f402097-3bb7-4217-9445-dd556a169bcf"
-					(reference "J7")
 					(unit 1)
 				)
 			)
