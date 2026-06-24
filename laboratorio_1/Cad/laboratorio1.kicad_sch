@@ -3344,7 +3344,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 50.4952 176.53 0)
 			(effects
 				(font
@@ -3654,7 +3654,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 82.2452 152.4 0)
 			(effects
 				(font
@@ -4097,7 +4097,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.4mm_P10.00mm_MKT"
 			(at 205.74 81.5848 0)
 			(effects
 				(font
@@ -4167,7 +4167,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350G_S16N-PC_Horizontal"
+		(property "Footprint" "Connector:Banana_Jack_1Pin"
 			(at 33.02 181.61 0)
 			(effects
 				(font
@@ -4470,7 +4470,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.4mm_P10.00mm_MKT"
 			(at 83.82 82.8548 0)
 			(effects
 				(font
@@ -5387,7 +5387,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.4mm_P10.00mm_MKT"
 			(at 107.95 77.7748 0)
 			(effects
 				(font
@@ -6071,7 +6071,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350L_S16N-PC_Horizontal"
+		(property "Footprint" "Connector:Banana_Jack_1Pin"
 			(at 33.02 162.56 0)
 			(effects
 				(font
@@ -6582,7 +6582,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.4mm_P10.00mm_MKT"
 			(at 172.72 87.9348 0)
 			(effects
 				(font
@@ -6718,7 +6718,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector:Banana_Cliff_FCR7350R_S16N-PC_Horizontal"
+		(property "Footprint" "Connector:Banana_Jack_1Pin"
 			(at 33.02 138.43 0)
 			(effects
 				(font
