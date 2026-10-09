@@ -15,7 +15,7 @@ from scipy import signal
 # ==========================================
 
 # Frecuencia de muestreo
-fs = 1000  # Hz
+fs = 40000  # Hz
 
 # Especificaciones
 fp = 100   # Frecuencia de banda de paso [Hz]
@@ -154,10 +154,23 @@ plt.legend()
 plt.show()
 
 print("\nCeros:")
-print(z)
 
 print("\nPolos:")
 print(p)
 
 print("\nMódulo de los polos:")
 print(np.abs(p))
+print()
+print("\n\SOS=")
+
+sos = signal.iirdesign(
+    wp=fp,
+    ws=fst,
+    gpass=gpass,
+    gstop=gstop,
+    ftype='cheby1',
+    fs=fs,
+    output='sos'
+)
+
+print(sos)

@@ -30,9 +30,9 @@ typedef enum{
 
 #define float_filter
 
-#define FIR_TAP_NUM 1
+#define FIR_TAP_NUM 99
 
-#define IIR_TAP_NUM 1
+#define IIR_TAP_NUM 5
 
 #define IIR_SOS_NUM 1
 
@@ -40,7 +40,7 @@ typedef enum{
 #define SAMPLE_RATE_20K	20000ul
 #define SAMPLE_RATE_40K	40000ul
 
-#define SAMPLE_RATE	SAMPLE_RATE_1K
+#define SAMPLE_RATE	SAMPLE_RATE_40K
 
 #define SAMPLES_PER_BLOCK 1024
 

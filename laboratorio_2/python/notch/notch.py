@@ -14,7 +14,7 @@ from scipy import signal
 # FILTRO B - NOTCH CON IIRDESIGN
 # ==========================================
 
-fs = 1000  # Hz
+fs = 40000  # Hz
 
 # Bordes
 wp = [49, 51]
@@ -233,3 +233,17 @@ plt.axis('equal')
 plt.legend()
 
 plt.show()
+
+print("\nSOS =")
+
+sos = signal.iirdesign(
+    wp=wp,
+    ws=ws,
+    gpass=gpass,
+    gstop=gstop,
+    ftype='ellip',
+    fs=fs,
+    output='sos'
+)
+
+print(sos)

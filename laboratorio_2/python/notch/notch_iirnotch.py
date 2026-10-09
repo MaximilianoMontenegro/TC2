@@ -14,7 +14,7 @@ from scipy import signal
 # FILTRO NOTCH CON iirnotch
 # ==========================================
 
-fs = 1000          # Frecuencia de muestreo [Hz]
+fs = 40000          # Frecuencia de muestreo [Hz]
 f_notch = 50       # Frecuencia del notch [Hz]
 BW = 1             # Ancho de banda a -3 dB [Hz]
 
@@ -179,3 +179,12 @@ plt.axis('equal')
 plt.legend()
 
 plt.show()  
+# ==========================================
+# CONVERSIÓN A SOS PARA STM32 / CMSIS-DSP
+# ==========================================
+
+print("\nSOS =")
+
+sos = signal.tf2sos(b, a)
+
+print(sos)
