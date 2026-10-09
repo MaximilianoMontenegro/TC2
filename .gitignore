@@ -44,3 +44,5 @@ __pycache__/
 
 *~
 laboratorio_2/TCII_Filter-NUCLEO_F446RE/Debug/
+laboratorio_2/python/notch/fir_-pasabajospy
+laboratorio_2/python/notch/fir_pasabajos.py
